@@ -1,0 +1,11 @@
+<%- include("partials/header"); -%> 
+
+<div class="post-header">
+    <h1 name = "postTitleName"><%=foundPost.title%></h1>
+    <form action="/delete" method="POST">
+        <button type="submit" class="btn btn-danger" name="postId" value="<%=foundPost._id%>">Delete</button>
+    </form>
+</div>
+<p><%=foundPost.content%></p>
+
+<%- include("partials/footer"); -%> 
